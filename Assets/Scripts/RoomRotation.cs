@@ -12,7 +12,6 @@ public class RoomRotation : MonoBehaviour
 
     Floor currentFloor;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentFloor = 0;
@@ -20,13 +19,10 @@ public class RoomRotation : MonoBehaviour
 
     void Update()
     {
-        if (isRotating)
+        room.transform.rotation = Quaternion.RotateTowards(room.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        if (1f - Mathf.Abs(Quaternion.Dot(room.transform.rotation, targetRotation)) < 0.01f)
         {
-            room.transform.rotation = Quaternion.RotateTowards(room.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            if (room.transform.rotation == targetRotation)
-            {
-                isRotating = false;
-            }
+            isRotating = false;
         }
     }
 
@@ -52,5 +48,6 @@ public class RoomRotation : MonoBehaviour
 
         isRotating = true;
         targetRotation = Quaternion.Euler(new Vector3(0f, 0f, (float)currentFloor * 90f));
+        Debug.Log(targetRotation);
     }
 }

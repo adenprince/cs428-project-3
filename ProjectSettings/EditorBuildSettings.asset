@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ScareCoOffices.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/MegoPlayset.unity
     guid: a738c8c43b786a449a60dd76fd35707f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DancingOnTheCeiling.unity
     guid: 25a561a013bef0443bfc46cc9eb2ed63
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/LandOfTheGiants.unity
     guid: 966d2a5a2e4641647a5242980cf502f9
   m_configObjects: {}
